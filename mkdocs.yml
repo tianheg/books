@@ -8,28 +8,40 @@ theme:
   name: material
   features:
     - content.action.edit
-    - navigation.footer
+    - header.autohide
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
     - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.top
     - search.highlight
     - search.suggest
     - toc.follow
-    - toc.integrate
+
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
 
+  font: false
+  logo: img/favicon.svg
+  favicon: img/favicon.svg
+
+plugins:
+  - search
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
-
+  - Home: index.md
+  - Node.js and JavaScript: nodejs/index.md
