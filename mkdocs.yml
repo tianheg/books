@@ -1,4 +1,5 @@
 site_name: Books
+site_url: https://book.tianheg.org
 
 repo_name: tianheg/books
 repo_url: https://github.com/tianheg/books
@@ -33,9 +34,12 @@ theme:
   font: false
   logo: img/favicon.svg
   favicon: img/favicon.svg
+  custom_dir: overrides
 
 plugins:
   - search
+  - minify:
+      minify_html: true
 
 markdown_extensions:
   - attr_list
