@@ -34,7 +34,7 @@ theme:
   font: false
   logo: img/favicon.svg
   favicon: img/favicon.svg
-  custom_dir: overrides
+  # custom_dir: overrides
 
 plugins:
   - search
